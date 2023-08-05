@@ -65,14 +65,10 @@ export default {
     padding: 10px;
     margin: 10px;
     width: 300px;
-    height: 400px;
+    height: 100px;
     display: flex;
     align-items: end;
-    .description{
-        display:flex;
-        flex-direction: column;
-        height: 100%;
-    }
+
 
 }
 

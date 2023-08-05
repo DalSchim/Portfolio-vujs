@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <h1>welcome</h1>
-      <bouton-componenet text="hello"/>
-  </div>
+    <header>
+        <h1> welcome on my portfolio </h1>
+
+    </header>
+
 </template>
+
+<style>
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background: url("../../Img.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+}
+</style>
 
 <script>
 
-import BoutonComponenet from "@/components/BoutonComponenet.vue";
+
 
 export default {
 
   name: 'HomeView',
-    components: {BoutonComponenet},
+
 
 
 }

@@ -6,14 +6,15 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {titel: 'Home'}
   },
   {
     path: '/projet',
     name: 'projet',
-    component: ProjetView
+    component: ProjetView,
+    meta: {titel: 'Projet'}
   }
-
 
 ]
 
@@ -21,5 +22,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+
+
 
 export default router
