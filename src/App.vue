@@ -1,6 +1,5 @@
 <template>
     <bugeur-componenet/>
-
     <router-view/>
 </template>
 
@@ -17,10 +16,21 @@ header{
     align-items: center;
 
 }
+h1{
+  font-family: 'Kurale', serif;
 
-body{
-    margin-top: 115px;
+
 }
+h2{
+  font-family: 'Kurale', serif;
+
+
+
+
+
+}
+
+
 </style>
 <script>
 
@@ -31,5 +41,6 @@ export default {
         BugeurComponenet,
     },
 }
+
 
 </script>

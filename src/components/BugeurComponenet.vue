@@ -82,10 +82,6 @@ export default {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-
-
-
-
 .navbar{
     position: fixed;
     top: 0;

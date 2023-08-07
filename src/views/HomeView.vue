@@ -1,33 +1,21 @@
 <template>
-    <header>
-        <h1> welcome on my portfolio </h1>
-
-    </header>
-
+    <HeaderComponents titre="Welcom to my portfolio"/>
 </template>
 
 <style>
 
-header {
-    height: 100vh;
-    width: 100vw;
-    background: url("../../Img.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
 
-}
 </style>
 
 <script>
 
 
 
+import HeaderComponents from "@/components/HeaderComponents.vue";
+
 export default {
-
   name: 'HomeView',
-
-
+  components: {HeaderComponents},
 
 }
 </script>
