@@ -15,10 +15,18 @@
         <div class="nav-links">
             <h2 class="second-titel">welcome</h2>
             <ul>
-                <li><router-link class="link" to="/projet">My projet</router-link></li>
-                <li><router-link class="link" to="">About Me</router-link></li>
-                <li><router-link class="link" to="">Contact</router-link></li>
-                <li><router-link class="link" to="">My Skills</router-link></li>
+                <li>
+                    <router-link class="link" to="/projet" @click="closeMenu">My projet</router-link>
+                </li>
+                <li>
+                    <router-link class="link" to="/about" @click="closeMenu">About Me</router-link>
+                </li>
+                <li>
+                    <router-link class="link" to="" @click="closeMenu">Contact</router-link>
+                </li>
+                <li>
+                    <router-link class="link" to="" @click="closeMenu">My Skills</router-link>
+                </li>
             </ul>
         </div>
         <div class="burgeur"  @click="toggleMenu">
@@ -48,6 +56,9 @@ export default {
     methods: {
         toggleMenu() {
             this.isOpen = !this.isOpen;
+        },
+        closeMenu() {
+            this.isOpen = false;
         },
     },
 };
@@ -95,6 +106,7 @@ export default {
 }
 
 .link{
+    font-family: 'Kurale', serif;
     color: white;
     text-decoration: none;
 }
@@ -161,7 +173,7 @@ export default {
         flex-direction: column;
         position: absolute;
         backdrop-filter: blur(7px);
-        background: rgba(255, 255, 255, 0.50);
+        background: rgba(0, 0, 0, 0.78);
         width: 100%;
         height: 100vh;
         display: flex;
