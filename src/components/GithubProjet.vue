@@ -46,10 +46,6 @@ export default {
     },
     mounted() {
         this.fetchProjects();
-
-
-
-
     },
     methods: {
         fetchProjects() {
@@ -89,6 +85,7 @@ export default {
                 SCSS: 'logos:sass',
                 CSS: 'logos:css-3',
                 Vue: 'logos:vue',
+                PHP: 'logos:php',
 
                 // Ajoutez des mappages pour d'autres langages si nécessaire
             };
@@ -97,8 +94,6 @@ export default {
         },
 
     },
-
-
 
 };
 </script>
@@ -127,11 +122,9 @@ export default {
 
 
 a{
-
     color: black;
     font-family: 'Kurale', serif;
     text-decoration: none;
-
 }
 
 .titel{
@@ -139,8 +132,6 @@ a{
     font-size: 2em;
     font-family: 'Kurale', serif;
     margin-bottom: 64px;
-
-
 }
 
 .body-projet{
@@ -164,10 +155,6 @@ li{
 ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-
-
-
 }
 
 
@@ -184,7 +171,6 @@ ul{
 h1,h2{
     text-align: center;
     font-size: 1.5em;
-
 }
 
 .infos{

@@ -186,7 +186,6 @@ export default {
 
     .nav-links.open{
         margin-left: 0;
-
     }
 
     .nav-links ul{
