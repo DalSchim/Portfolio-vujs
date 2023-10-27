@@ -11,8 +11,6 @@ export default {
 
 <template>
     <header-components titre="Who I am"></header-components>
-
-
     <section class="me">
         <div class="inform">
             <h2 class="">About Me</h2>
@@ -21,11 +19,9 @@ export default {
             </p>
         </div>
         <div class="photo">
-            <img src="" alt="">
+            <img class="image" src="src/assets/new.png" alt="">
         </div>
     </section>
-  
-
 </template>
 
 <style scoped>
@@ -53,5 +49,12 @@ export default {
     justify-content: center;
     align-items: center;
 }
+
+.image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 
 </style>
