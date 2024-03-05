@@ -4,7 +4,6 @@
   <section>
     <header-components titre="Mes projets" soustitre="Voici mes projets réalisés en cours de formation"/>
     <GitHubProjects/>
-
   </section>
 
 </template>

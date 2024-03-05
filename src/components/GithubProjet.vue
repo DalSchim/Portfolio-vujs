@@ -5,12 +5,14 @@
     <!-- Boutons de filtre -->
     <div class="filter-buttons">
       <button @click="filterProjects('All')" :class="{ active: selectedFilter === 'All' }">Tous</button>
-      <button @click="filterProjects('JavaScript')" :class="{ active: selectedFilter === 'JavaScript' }">JavaScript</button>
+      <button @click="filterProjects('JavaScript')" :class="{ active: selectedFilter === 'JavaScript' }">JavaScript
+      </button>
       <button @click="filterProjects('Python')" :class="{ active: selectedFilter === 'Python' }">Python</button>
       <button @click="filterProjects('SCSS')" :class="{ active: selectedFilter === 'SCSS' }">SCSS</button>
       <button @click="filterProjects('CSS')" :class="{ active: selectedFilter === 'CSS' }">CSS</button>
       <button @click="filterProjects('Vue')" :class="{ active: selectedFilter === 'Vue' }">Vue</button>
       <button @click="filterProjects('PHP')" :class="{ active: selectedFilter === 'PHP' }">PHP</button>
+      <button @click="filterProjects('Blade')" :class="{ active: selectedFilter === 'Blade' }">Blade</button>
       <!-- Ajoutez des boutons pour d'autres langages si nécessaire -->
     </div>
 
@@ -20,12 +22,13 @@
           <div class="description">
             <a :href="project.html_url" target="_blank"><h2>{{ project.name }}</h2></a>
             <div class="infos">
-              <a v-if="project.homepage" :href="project.homepage" target="_blank"><p style="color: #FF9900; ">Visitez le Site web</p></a>
+              <a v-if="project.homepage" :href="project.homepage" target="_blank"><p style="color: #FF9900; ">Visitez le
+                Site web</p></a>
               <p v-else style="color: red; font-size: 1em">Pas de site web</p>
               <p>{{ project.description }}</p>
               <div class="languages">
                 <div class="icons" v-for="(bytes, language) in projectLanguages[project.name]" :key="language">
-                  <Icon class="icon" :icon="getIconForLanguage(language)" />
+                  <Icon class="icon" :icon="getIconForLanguage(language)"/>
                 </div>
               </div>
             </div>
@@ -37,8 +40,10 @@
 </template>
 
 <script>
+// céez un écrant de chargement pour les projets
+
 import axios from 'axios';
-import { Icon } from '@iconify/vue';
+import {Icon} from '@iconify/vue';
 
 export default {
   components: {
@@ -57,6 +62,7 @@ export default {
         'CSS',
         'Vue',
         'PHP',
+        'Blade',
         // Ajoutez d'autres langages si nécessaire
       ],
       selectedFilter: 'All',
@@ -118,6 +124,7 @@ export default {
         CSS: 'logos:css-3',
         Vue: 'logos:vue',
         PHP: 'logos:php',
+        Blade: 'vscode-icons:file-type-blade',
         // Ajoutez d'autres mappages pour d'autres langages si nécessaire
       };
 
@@ -150,11 +157,11 @@ export default {
   color: #FF9900;
 }
 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .card {
   width: 300px;
@@ -169,9 +176,10 @@ export default {
   padding: 10px;
   transition: 0.5s;
 }
+
 .card:hover {
   box-shadow: 0 0 20px #FF9900;
-  transform: scale(1.1); ;
+  transform: scale(1.1);;
 }
 
 a {
@@ -241,7 +249,6 @@ h1, h2 {
   align-items: center;
   height: 100%;
 }
-
 
 
 /* Autres styles ... */

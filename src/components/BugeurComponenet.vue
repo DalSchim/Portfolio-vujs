@@ -22,7 +22,7 @@
                     <router-link class="link" to="/about" @click="closeMenu">About Me</router-link>
                 </li>
                 <li>
-                    <router-link class="link" to="" @click="closeMenu">Contact</router-link>
+                    <router-link class="link" to="/contact" @click="closeMenu">Contact</router-link>
                 </li>
                 <li>
                     <router-link class="link" to="" @click="closeMenu">My Skills</router-link>
@@ -98,11 +98,13 @@ export default {
     top: 0;
     padding: 50px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+  align-items: center;
     width: 100%;
     height: 100px;
     box-sizing: border-box;
     backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.78);
 }
 
 .link{
@@ -125,15 +127,6 @@ export default {
 .link:hover::after{
     width: 100%;
     left: 0;
-}
-
-
-.logo{
-    position: absolute;
-    top: 32px;
-    left: 32px;
-    color: white;
-    font-weight: bold;
 }
 
 .nav-links ul{

@@ -1,59 +1,91 @@
+<template>
+  <HeaderComponents titre="A propos de moi"/>
+  <section id="profile">
+    <div class="container">
+      <div class="about">
+        <div class="about-img">
+          <transition name="fade" mode="out-in">
+            <img v-if="show" src="../assets/new.png" alt="photo de profil">
+          </transition>
+        </div>
+        <div class="about-text">
+          <h2>Qui suis-je ?</h2>
+          <p> Je sui un jeune developeur travailant principalement sur des projets front-end </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</template>
 <script>
 import HeaderComponents from "@/components/HeaderComponents.vue";
 
 export default {
-    name: 'AboutView',
-    components: {HeaderComponents},
-    
+  // recuper tous les infmation sur les langage que je maitrise et les affichher avec un slider
+  name: 'AboutView',
+  components: {
+    HeaderComponents
+  },
+  data() {
+    return {
+      show: false
+    }
+  },
+  mounted() {
+    this.show = true
+  }
+
+
+
+
+
 }
 
 </script>
-
-<template>
-    <header-components titre="Who I am"></header-components>
-    <section class="me">
-        <div class="inform">
-            <h2 class="">About Me</h2>
-            <p class="text">
-                I am a web developer, I am passionate about the web and new technologies. I am a person who likes to learn new things and who is not afraid of challenges. I am a person who likes to work in a team and who is not afraid to ask for help when needed. I am a person who likes to learn new things and who is not afraid of challenges. I am a person who likes to work in a team and who is not afraid to ask for help when needed.
-            </p>
-        </div>
-        <div class="photo">
-            <img class="image" src="src/assets/new.png" alt="">
-        </div>
-    </section>
-</template>
-
-<style scoped>
-.me {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    background: #1E1E1E;
+<style scoped lang="scss">
+section {
+  background-color: #1E1E1E;
 }
 
-.inform{
-    color: white;
-    padding: 64px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
+.container {
+  margin: 0 auto;
+  max-width: 920px;
+  justify-content: center;
+  display: flex;
 
-.photo{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  gap: 20px;
 
-.image{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  .about {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .about-text {
+    h2 {
+      font-size: 30px;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    p {
+      color: #fff;
+      font-size: 20px;
+    }
+
+  }
+  .about-img {
+    margin: 32px 16px;
+    img {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
 }
 
 

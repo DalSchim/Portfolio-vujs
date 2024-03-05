@@ -2,12 +2,20 @@
   <header>
     <h1> {{titre}}</h1>
     <h2> {{soustitre}}</h2>
+    <div class="social-media">
+      <a href=""><Icon width="64px" color="white" icon="line-md:github-loop" /></a>
+      <a href=""><Icon  width="64px" color="white" icon="line-md:linkedin" /></a>
+    </div>
   </header>
 </template>
 
 <script>
+import { Icon } from '@iconify/vue';
 export default {
   name: "HeaderComponents",
+  components: {
+    Icon,
+  },
   props:{
     soustitre: {
       type: String,
@@ -53,6 +61,11 @@ h2{
   0 0 20px #fff,
   0 0 100px #ff9900,
   0 0 150px #ff9900;
+}
+.social-media{
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
 }
 
 @media screen and (max-width: 900px){
