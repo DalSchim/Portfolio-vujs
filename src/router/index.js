@@ -1,7 +1,8 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProjetView from "@/views/ProjetView.vue";
 import AboutView from "@/views/AboutView.vue";
+import MyskillView from "@/views/MyskillView.vue";
 
 const routes = [
     {
@@ -31,6 +32,11 @@ const routes = [
         path:'/contact',
         name: 'contact',
         component: () => import('../views/ContactView.vue'),
+    },
+    {
+        path: '/myskill',
+        name: 'myskill',
+        component: MyskillView,
     }
 
 
@@ -38,7 +44,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes
 })
 

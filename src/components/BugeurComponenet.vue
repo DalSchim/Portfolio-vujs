@@ -25,7 +25,7 @@
                     <router-link class="link" to="/contact" @click="closeMenu">Contact</router-link>
                 </li>
                 <li>
-                    <router-link class="link" to="" @click="closeMenu">My Skills</router-link>
+                    <router-link class="link" to="/myskill" @click="closeMenu">My Skills</router-link>
                 </li>
             </ul>
         </div>
@@ -142,12 +142,7 @@ export default {
     display: none;
 }
 
-
-
-
-
 @media screen and (max-width: 900px) {
-
 
     .logo{
         position: absolute;

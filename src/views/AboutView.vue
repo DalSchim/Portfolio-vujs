@@ -10,7 +10,7 @@
         </div>
         <div class="about-text">
           <h2>Qui suis-je ?</h2>
-          <p> Je sui un jeune developeur travailant principalement sur des projets front-end </p>
+          <p> Je suis un jeune developeur travailant principalement sur des projets front-end </p>
         </div>
       </div>
     </div>

@@ -4,12 +4,14 @@
     <!-- Boutons de filtre -->
     <div class="filter-buttons">
       <button @click="filterProjects('All')" :class="{ active: selectedFilter === 'All' }">Tous</button>
+      <button @click="filterProjects('HTML')" :class="{ active: selectedFilter === 'HTML' }">HTML</button>
       <button @click="filterProjects('JavaScript')" :class="{ active: selectedFilter === 'JavaScript' }">JavaScript</button>
       <button @click="filterProjects('Python')" :class="{ active: selectedFilter === 'Python' }">Python</button>
       <button @click="filterProjects('SCSS')" :class="{ active: selectedFilter === 'SCSS' }">SCSS</button>
       <button @click="filterProjects('CSS')" :class="{ active: selectedFilter === 'CSS' }">CSS</button>
       <button @click="filterProjects('Vue')" :class="{ active: selectedFilter === 'Vue' }">Vue</button>
       <button @click="filterProjects('PHP')" :class="{ active: selectedFilter === 'PHP' }">PHP</button>
+      <button @click="filterProjects('TypeScript')" :class="{ active: selectedFilter === 'TypeScript' }">TypeScript</button>
       <button @click="filterProjects('Blade')" :class="{ active: selectedFilter === 'Blade' }">Blade</button>
       <!-- Ajoutez des boutons pour d'autres langages si nécessaire -->
     </div>
@@ -41,18 +43,17 @@
 
 import axios from 'axios';
 import {Icon} from '@iconify/vue';
-
 export default {
   components: {
     Icon,
   },
-
   data() {
     return {
       projects: [],
       projectLanguages: {},
       filters: [
         'All',
+        'HTLL',
         'JavaScript',
         'Python',
         'SCSS',
@@ -60,19 +61,22 @@ export default {
         'Vue',
         'PHP',
         'Blade',
+        'TypeScript',
         // Ajoutez d'autres langages si nécessaire
       ],
       selectedFilter: 'All',
     };
   },
 
+  // si le langage est égale à tous les projets sont affichés
   computed: {
     filteredProjects() {
       if (this.selectedFilter === 'All') {
         return this.projects;
-      } else {
-        return this.projects.filter(project => project.language === this.selectedFilter);
       }
+      return this.projects.filter(project => {
+        return this.projectLanguages[project.name] && this.projectLanguages[project.name][this.selectedFilter];
+      });
     },
   },
 
@@ -121,6 +125,7 @@ export default {
         Vue: 'logos:vue',
         PHP: 'logos:php',
         Blade: 'vscode-icons:file-type-blade',
+        TypeScript: 'logos:typescript-icon',
         // Ajoutez d'autres mappages pour d'autres langages si nécessaire
       };
 
@@ -153,8 +158,6 @@ export default {
   background-color: #333;
   color: #FF9900;
 }
-
-
 
 .card {
   width: 300px;
@@ -243,7 +246,5 @@ h1, h2 {
   align-items: center;
   height: 100%;
 }
-
-
 /* Autres styles ... */
 </style>
