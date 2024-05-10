@@ -137,6 +137,7 @@ export default {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .filter-buttons button {
