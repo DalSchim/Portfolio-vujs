@@ -10,14 +10,12 @@ export default {
 </script>
 
 <template>
-
   <HeaderComponents titre="Contact" soustitre="Contactez moi"/>
   <section class="contact">
     <div class="container">
       <div class="contact-form">
         <form action="">
-          <div class="form-group
-            ">
+          <div class="form-group">
             <label for="name">Nom</label>
             <input type="text" id="name" placeholder="Votre nom">
           </div>
@@ -42,8 +40,8 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
-
 .container {
   width: 100%;
   max-width: 600px;

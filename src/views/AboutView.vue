@@ -34,11 +34,6 @@ export default {
   mounted() {
     this.show = true
   }
-
-
-
-
-
 }
 
 </script>

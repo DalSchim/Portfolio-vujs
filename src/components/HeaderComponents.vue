@@ -3,8 +3,8 @@
     <h1> {{titre}}</h1>
     <h2> {{soustitre}}</h2>
     <div class="social-media">
-      <a href=""><Icon width="64px" color="white" icon="line-md:github-loop" /></a>
-      <a href=""><Icon  width="64px" color="white" icon="line-md:linkedin" /></a>
+      <a href=""><Icon width="32px" color="white" icon="line-md:github-loop" /></a>
+      <a href=""><Icon  width="32px" color="white" icon="line-md:linkedin" /></a>
     </div>
   </header>
 </template>
@@ -37,6 +37,7 @@ header {
   height: 100vh;
   width: 100vw;
   background: url("../../Img.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   color: white;
@@ -64,7 +65,7 @@ h2{
 }
 .social-media{
   position: absolute;
-  bottom: 50px;
+  bottom: 16px;
   right: 20px;
 }
 

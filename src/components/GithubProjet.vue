@@ -1,12 +1,10 @@
 <template>
   <div class="body-projet">
     <h1 class="titel">Mes projets GitHub</h1>
-
     <!-- Boutons de filtre -->
     <div class="filter-buttons">
       <button @click="filterProjects('All')" :class="{ active: selectedFilter === 'All' }">Tous</button>
-      <button @click="filterProjects('JavaScript')" :class="{ active: selectedFilter === 'JavaScript' }">JavaScript
-      </button>
+      <button @click="filterProjects('JavaScript')" :class="{ active: selectedFilter === 'JavaScript' }">JavaScript</button>
       <button @click="filterProjects('Python')" :class="{ active: selectedFilter === 'Python' }">Python</button>
       <button @click="filterProjects('SCSS')" :class="{ active: selectedFilter === 'SCSS' }">SCSS</button>
       <button @click="filterProjects('CSS')" :class="{ active: selectedFilter === 'CSS' }">CSS</button>
@@ -15,7 +13,6 @@
       <button @click="filterProjects('Blade')" :class="{ active: selectedFilter === 'Blade' }">Blade</button>
       <!-- Ajoutez des boutons pour d'autres langages si nécessaire -->
     </div>
-
     <ul>
       <li v-for="project in filteredProjects" :key="project.id">
         <div class="card">
@@ -90,7 +87,6 @@ export default {
 
     fetchProjects() {
       const apiUrl = 'https://api.github.com/users/DalSchim/repos';
-
       axios.get(apiUrl)
           .then(response => {
             this.projects = response.data;
@@ -157,11 +153,7 @@ export default {
   color: #FF9900;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .card {
   width: 300px;
@@ -198,8 +190,9 @@ a {
 .body-projet {
   background: #1E1E1E;
   transition: height 0.5s ease-in-out;
-  height: 150vh;
-
+  height: auto;
+  padding:  8px 32px;
+  width: 100vw;
 }
 
 .description {
