@@ -3,8 +3,8 @@
     <h1> {{titre}}</h1>
     <h2> {{soustitre}}</h2>
     <div class="social-media">
-      <a href=""><Icon width="32px" color="white" icon="line-md:github-loop" /></a>
-      <a href=""><Icon  width="32px" color="white" icon="line-md:linkedin" /></a>
+      <a href="https://github.com/DalSchim"><Icon width="32px" color="white" icon="line-md:github-loop" /></a>
+      <a href="https://www.linkedin.com/in/guillaume-gonidou/"><Icon  width="32px" color="white" icon="line-md:linkedin" /></a>
     </div>
   </header>
 </template>
