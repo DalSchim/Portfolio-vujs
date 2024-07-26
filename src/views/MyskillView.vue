@@ -1,8 +1,10 @@
 <script>
 import axios from "axios";
+import HeaderComponents from "@/components/HeaderComponents.vue";
 
 export default {
   name: 'MyskillView',
+  components: {HeaderComponents},
 
   methods: {},
 
@@ -20,9 +22,7 @@ export default {
 };
 </script>
 <template>
-  <div>
-
-  </div>
+  <header-components titre="My skill"/>
 </template>
 <style>
 
