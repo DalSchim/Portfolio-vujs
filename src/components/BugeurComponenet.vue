@@ -105,7 +105,9 @@ export default {
     box-sizing: border-box;
     backdrop-filter: blur(2px);
     background: rgba(0, 0, 0, 0.78);
+  z-index: 111;
 }
+
 
 .link{
     font-family: 'Kurale', serif;
